@@ -3,7 +3,13 @@ $(function() {
 
     var header = $("header"),
         introH = $("#intro").innerHeight(),
-        scrollOffset = $(window).scrollTop();
+        scrollOffset = $(window).scrollTop(),
+        nav = $("#nav"),
+        navA = $("#nav a"),
+        navToggle = $("#nav_toggle"),
+        dataScroll = $("[data-scroll]"),
+        dataCollapse = $("[data-collapse]"),
+        dataSlider = $("[data-slider]");
 
 
     /* Fixed Header */ 
@@ -27,17 +33,17 @@ $(function() {
 
 
     /* Smooth scroll */ 
-    $("[data-scroll]").on("click", function(event) {
+    dataScroll.on("click", function(event) {
         event.preventDefault();
 
         var $this = $(this),
             blockId = $this.data('scroll'),
             blockOffset = $(blockId).offset().top;
 
-            $("#nav a").removeClass ("active");
-            $("#nav").removeClass ("active");
+            navA.removeClass ("active");
+            nav.removeClass ("active");
             $this.addClass("active");
-            $("#nav_toggle").removeClass ("active");
+            navToggle.removeClass ("active");
 
         $("html, bode").animate({
             scrollTop: blockOffset -70
@@ -46,27 +52,29 @@ $(function() {
 
 
     /* Menu nav toggle */ 
-    $("#nav_toggle").on("click", function(event) {
+    navToggle.on("click", function(event) {
         event.preventDefault();
 
-        $(this).toggleClass("active");
-        $("#nav").toggleClass("active");
+        var $this = $(this);
+
+        $this.toggleClass("active");
+        nav.toggleClass("active");
     });
 
 
     /* Collapse */ 
-    $("[data-collapse]").on("click", function(event) {
+    dataCollapse.on("click", function(event) {
         event.preventDefault();
 
-        var $this = $(this),
-            blockId = $this.data('collapse');
+        var $this = $(this);
 
-            $this.toggleClass("active");
+        $this.toggleClass("active");
     });
 
 
-    /* Slider */ 
-    $("[data-slider]").slick({
+    /* Slider
+    https://kenwheeler.github.io/slick/ */ 
+    dataSlider.slick({
         infinite: true,
         fade: false,
         slidesToShow: 1,

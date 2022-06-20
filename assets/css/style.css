@@ -84,6 +84,7 @@ hr {
     font-size: 30px;
     font-weight: 700;
     color: #fff;
+    cursor: pointer;
 }
 
 .header__inner {
@@ -134,7 +135,8 @@ hr {
     color: #fce38a;
 }
 
-.nav__link:hover:after, .nav__link.active:after {
+.nav__link:hover:after,
+.nav__link.active:after {
     opacity: 1;
 }
 
@@ -1177,6 +1179,12 @@ hr {
 
     font-size: 18px;
     color: #95e1d3;
+
+    transition: transform .2s linear;
+}
+
+.footer__social-content a:hover {
+    transform: translateY(-5px);
 }
 
 .footer__title {
@@ -1493,6 +1501,7 @@ margin-bottom: 30px;
 
     .nav.active {
         display: block;
+        padding-bottom: 10px;
     }
 
     .nav__link {
