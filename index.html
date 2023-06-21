@@ -19,6 +19,7 @@
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
     <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/jquery.rateyo.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>MoGo</title>
   </head>
@@ -29,18 +30,16 @@
         <div class="header__inner">
           <div class="header__top">
             <ul class="header__list">
-              <li class="header__item header__item--phone">
-                <a class="header__phone" href="tel:+79381593138"
-                  >+7(938) 159 31 38</a
-                >
+              <li class="header__item">
+                <a class="phone" href="tel:+79381593138">+7(938) 159 31 38</a>
               </li>
-              <li class="header__item header__item--email">
-                <a class="header__email" href="mailto:info@fitnessomsk.ru"
+              <li class="header__item">
+                <a class="email" href="mailto:info@fitnessomsk.ru"
                   >info@fitnessomsk.ru</a
                 >
               </li>
-              <li class="header__item header__item--time">
-                <span class="header__time">
+              <li class="header__item">
+                <span class="time">
                   Пн-Пт : 8.00-22.00 Сб-Вс : 8.00-21.00
                 </span>
               </li>
@@ -56,7 +55,7 @@
               <a class="nav__link" href="#" data-scroll="#about">О нас</a>
               <a class="nav__link" href="#" data-scroll="#services">Услуги</a>
               <a class="nav__link" href="#" data-scroll="#team">Тренеры</a>
-              <a class="nav__link" href="#" data-scroll="#photo">Фото клуба</a>
+              <a class="nav__link" href="#" data-scroll="#zal">Фото клуба</a>
               <a class="nav__link" href="#" data-scroll="#footer">Контакты</a>
             </nav>
 
@@ -89,19 +88,19 @@
         <div class="slider">
           <div class="container">
             <div class="slider__inner">
-              <div class="slider__item active">
+              <div class="slider__item slider__item--active" data-scroll="#subscription">
                 <span class="slider__num">01</span>
                 <span class="slider__text">Абонемент</span>
               </div>
-              <div class="slider__item">
+              <div class="slider__item" data-scroll="#reviews">
                 <span class="slider__num">02</span>
                 <span class="slider__text">Отзывы</span>
               </div>
-              <div class="slider__item">
+              <div class="slider__item" data-scroll="#blog">
                 <span class="slider__num">03</span>
                 <span class="slider__text">Блог</span>
               </div>
-              <div class="slider__item">
+              <div class="slider__item" data-scroll="#footer">
                 <span class="slider__num">04</span>
                 <span class="slider__text">Контакты</span>
               </div>
@@ -179,7 +178,7 @@
       <section class="section" id="about">
         <div class="container">
           <div class="section__header">
-            <h3 class="section__cuptitle">О НАС</h3>
+            <h3 class="section__suptitle">О НАС</h3>
             <h2 class="section__title">ДОБРО ПОЖАЛОВАТЬ В IRONHERO GYM</h2>
             <div class="section__text">
               <p>
@@ -378,122 +377,952 @@
         <!-- /.Container -->
       </section>
 
-      <!-- Devices -->
-      <section class="section section--devices">
+      <!-- Subscription -->
+      <section class="section subscription" id="subscription">
         <div class="container">
-          <div class="section__header">
-            <h3 class="section__cuptitle">For all devices</h3>
-            <h2 class="section__title">Unique design</h2>
-          </div>
+          <div class="subscription__inner">
+            <div class="section__header">
+              <h3 class="section__suptitle">НАШИ ЦЕНЫ</h3>
+              <h2 class="section__title">ВЫБЕРИТЕ АБОНЕМЕНТ</h2>
+            </div>
 
-          <div class="devices">
-            <img class="devices__item" src="assets/images/ipad.png" alt="" />
-            <img
-              class="devices__item devices__item--iphone"
-              src="assets/images/iphone.png"
-              alt=""
-            />
+            <div class="subscription__items">
+              <div class="subscription__item">
+                <h5 class="subscription__title">РАЗОВОЕ ПОСЕЩЕНИЕ</h5>
+                <div class="subscription__box-price">
+                  <span class="subscription__price-num">150 ₽</span>
+                  <p class="subscription__price-date">день</p>
+                </div>
+                <ul class="subscription__info">
+                  <li class="subscription__info-item">День безлимита</li>
+                  <li class="subscription__info-item">Силовой зал</li>
+                  <li class="subscription__info-item">Кардио</li>
+                  <li class="subscription__info-item">Зал растяжки</li>
+                  <li class="subscription__info-item">Вводный инструктаж</li>
+                </ul>
+                <a class="subscription__buy" href="#">КУПИТЬ</a>
+              </div>
+              <div class="subscription__item subscription__item--active">
+                <h5 class="subscription__title">МЕСЯЦ БЕЗЛИМИТ</h5>
+                <div class="subscription__box-price">
+                  <span class="subscription__price-num">2000 ₽</span>
+                  <p class="subscription__price-date">месяц</p>
+                </div>
+                <ul class="subscription__info">
+                  <li class="subscription__info-item">Весь месяц безлимита</li>
+                  <li class="subscription__info-item">Силовой зал</li>
+                  <li class="subscription__info-item">Кардио</li>
+                  <li class="subscription__info-item">Зал растяжки</li>
+                  <li class="subscription__info-item">Вводный инструктаж</li>
+                </ul>
+                <a class="subscription__buy" href="#">КУПИТЬ</a>
+              </div>
+              <div class="subscription__item">
+                <h5 class="subscription__title">6 МЕСЯЦЕВ БЕЗЛИМИТ</h5>
+                <div class="subscription__box-price">
+                  <span class="subscription__price-num">7000 ₽</span>
+                  <p class="subscription__price-date">6 месяцев</p>
+                </div>
+                <ul class="subscription__info">
+                  <li class="subscription__info-item">6 месяцев безлимита</li>
+                  <li class="subscription__info-item">Силовой зал</li>
+                  <li class="subscription__info-item">Кардио</li>
+                  <li class="subscription__info-item">Зал растяжки</li>
+                  <li class="subscription__info-item">Вводный инструктаж</li>
+                </ul>
+                <a class="subscription__buy" href="#">КУПИТЬ</a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Services-2 -->
-      <section class="section">
+      <!-- Team -->
+      <section class="section team" id="team">
         <div class="container">
-          <div class="section__header">
-            <h3 class="section__cuptitle">Service</h3>
-            <h2 class="section__title">what we do</h2>
-            <div class="section__text">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
+          <h2 class="section__title">Наши тренеры — наша гордость!</h2>
+
+          <div class="team-box">
+            <h3 class="team__title">Тренеры тренажёрного зала</h3>
+            <div class="team-slider">
+              <div class="team__item">
+                <div
+                  class="team__item-imgbox"
+                  style="background-image: url('assets/images/team/zal/1.jpg')"
+                >
+                  <div class="team__item-social">
+                    <div class="social">
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-telegram"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="team__item-info">
+                  <h5 class="team__item-name">Карпов Алексей</h5>
+                  <p class="team__item-position">
+                    Коррекция фигуры, силовые тренировки, функциональные
+                    тренировки
+                  </p>
+                </div>
+                <a class="team__item-link" href="#">Записаться на тренировку</a>
+              </div>
+              <div class="team__item">
+                <div
+                  class="team__item-imgbox"
+                  style="background-image: url('assets/images/team/zal/2.jpg')"
+                >
+                  <div class="team__item-social">
+                    <div class="social">
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-telegram"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="team__item-info">
+                  <h5 class="team__item-name">Богданов Савелий</h5>
+                  <p class="team__item-position">
+                    Снижение жирового компонента, набор мышечной массы,
+                    функциональный тренинг
+                  </p>
+                </div>
+                <a class="team__item-link" href="#">Записаться на тренировку</a>
+              </div>
+              <div class="team__item">
+                <div
+                  class="team__item-imgbox"
+                  style="background-image: url('assets/images/team/zal/3.jpg')"
+                >
+                  <div class="team__item-social">
+                    <div class="social">
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-telegram"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="team__item-info">
+                  <h5 class="team__item-name">Кондратьева Алёна</h5>
+                  <p class="team__item-position">
+                    Снижение жирового компонента, набор мышечной массы,
+                    подготовка к сдаче ГТО, тренер по бегу, восстановление после
+                    родов
+                  </p>
+                </div>
+                <a class="team__item-link" href="#">Записаться на тренировку</a>
+              </div>
+              <div class="team__item">
+                <div
+                  class="team__item-imgbox"
+                  style="background-image: url('assets/images/team/zal/4.jpg')"
+                >
+                  <div class="team__item-social">
+                    <div class="social">
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-telegram"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="team__item-info">
+                  <h5 class="team__item-name">Скворцов Александр</h5>
+                  <p class="team__item-position">
+                    Коррекция фигуры, набор мышечной массы. Восстановление после
+                    травм, аварий, операций. Работа с лицами с ОВЗ, в том числе
+                    с ДЦП
+                  </p>
+                </div>
+                <a class="team__item-link" href="#">Записаться на тренировку</a>
+              </div>
+              <div class="team__item">
+                <div
+                  class="team__item-imgbox"
+                  style="background-image: url('assets/images/team/zal/5.jpg')"
+                >
+                  <div class="team__item-social">
+                    <div class="social">
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-telegram"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="team__item-info">
+                  <h5 class="team__item-name">Ларина Екатерина</h5>
+                  <p class="team__item-position">
+                    Индивидуальные тренировки и в мини-группах «Здоровая спина»
+                    и «Сайкл», тренировки направленные на восстановление
+                  </p>
+                </div>
+                <a class="team__item-link" href="#">Записаться на тренировку</a>
+              </div>
             </div>
           </div>
 
-          <div class="wedo">
-            <div class="wedo__item">
+          <div class="team-box">
+            <h3 class="team__title">Тренеры водных программ</h3>
+            <div class="team-slider">
+              <div class="team__item">
+                <div
+                  class="team__item-imgbox"
+                  style="
+                    background-image: url('assets/images/team/water/1.jpg');
+                  "
+                >
+                  <div class="team__item-social">
+                    <div class="social">
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-telegram"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="team__item-info">
+                  <h5 class="team__item-name">Ежов Артём</h5>
+                  <p class="team__item-position">
+                    Функциональный тренинг, реабилитация после травм, работа с
+                    детьми с ОВЗ
+                  </p>
+                </div>
+                <a class="team__item-link" href="#">Записаться на тренировку</a>
+              </div>
+              <div class="team__item">
+                <div
+                  class="team__item-imgbox"
+                  style="
+                    background-image: url('assets/images/team/water/2.jpg');
+                  "
+                >
+                  <div class="team__item-social">
+                    <div class="social">
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-telegram"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="team__item-info">
+                  <h5 class="team__item-name">Осипова Валерия</h5>
+                  <p class="team__item-position">
+                    Аквааэробика. аквааэробика для беременных
+                  </p>
+                </div>
+                <a class="team__item-link" href="#">Записаться на тренировку</a>
+              </div>
+              <div class="team__item">
+                <div
+                  class="team__item-imgbox"
+                  style="
+                    background-image: url('assets/images/team/water/3.jpg');
+                  "
+                >
+                  <div class="team__item-social">
+                    <div class="social">
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-telegram"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="team__item-info">
+                  <h5 class="team__item-name">Матвеев Марк</h5>
+                  <p class="team__item-position">
+                    Обучение плаванию, реабилитация после травм, занятия с
+                    детьми с ОВЗ
+                  </p>
+                </div>
+                <a class="team__item-link" href="#">Записаться на тренировку</a>
+              </div>
+              <div class="team__item">
+                <div
+                  class="team__item-imgbox"
+                  style="
+                    background-image: url('assets/images/team/water/4.jpg');
+                  "
+                >
+                  <div class="team__item-social">
+                    <div class="social">
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-telegram"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="team__item-info">
+                  <h5 class="team__item-name">Иванов Даниил</h5>
+                  <p class="team__item-position">
+                    Персональный тренер и тренер детских оздоровительных групп.
+                    Обучение плаванию от трёх лет.
+                  </p>
+                </div>
+                <a class="team__item-link" href="#">Записаться на тренировку</a>
+              </div>
+              <div class="team__item">
+                <div
+                  class="team__item-imgbox"
+                  style="
+                    background-image: url('assets/images/team/water/5.jpg');
+                  "
+                >
+                  <div class="team__item-social">
+                    <div class="social">
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-telegram"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="team__item-info">
+                  <h5 class="team__item-name">Гусев Павел</h5>
+                  <p class="team__item-position">
+                    Обучение первым навыкам плавания, укрепление осанки, мышц,
+                    подготовка к соревновательной деятельности
+                  </p>
+                </div>
+                <a class="team__item-link" href="#">Записаться на тренировку</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-box">
+            <h3 class="team__title">Детские тренеры</h3>
+            <div class="team-slider">
+              <div class="team__item">
+                <div
+                  class="team__item-imgbox"
+                  style="
+                    background-image: url('assets/images/team/children/1.jpg');
+                  "
+                >
+                  <div class="team__item-social">
+                    <div class="social">
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-telegram"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="team__item-info">
+                  <h5 class="team__item-name">Гладков Владимир</h5>
+                  <p class="team__item-position">
+                    Работа с коррекцией фигуры, повышение функциональных
+                    возможностей, развитие силовых возможностей
+                  </p>
+                </div>
+                <a class="team__item-link" href="#">Записаться на тренировку</a>
+              </div>
+              <div class="team__item">
+                <div
+                  class="team__item-imgbox"
+                  style="
+                    background-image: url('assets/images/team/children/2.jpg');
+                  "
+                >
+                  <div class="team__item-social">
+                    <div class="social">
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-telegram"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="team__item-info">
+                  <h5 class="team__item-name">Чернова Ксения</h5>
+                  <p class="team__item-position">
+                    Координатор детского клуба<br />
+                    Работа с коррекцией осанки и фигуры. Тренер-хореограф
+                  </p>
+                </div>
+                <a class="team__item-link" href="#">Записаться на тренировку</a>
+              </div>
+              <div class="team__item">
+                <div
+                  class="team__item-imgbox"
+                  style="
+                    background-image: url('assets/images/team/children/3.jpg');
+                  "
+                >
+                  <div class="team__item-social">
+                    <div class="social">
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-telegram"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="team__item-info">
+                  <h5 class="team__item-name">Исаев Степан</h5>
+                  <p class="team__item-position">Детский тренер-хореограф</p>
+                </div>
+                <a class="team__item-link" href="#">Записаться на тренировку</a>
+              </div>
+              <div class="team__item">
+                <div
+                  class="team__item-imgbox"
+                  style="
+                    background-image: url('assets/images/team/children/4.jpg');
+                  "
+                >
+                  <div class="team__item-social">
+                    <div class="social">
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-telegram"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="team__item-info">
+                  <h5 class="team__item-name">Павлова Татьяна</h5>
+                  <p class="team__item-position">Детский тренер-хореограф</p>
+                </div>
+                <a class="team__item-link" href="#">Записаться на тренировку</a>
+              </div>
+              <div class="team__item">
+                <div
+                  class="team__item-imgbox"
+                  style="
+                    background-image: url('assets/images/team/children/5.jpg');
+                  "
+                >
+                  <div class="team__item-social">
+                    <div class="social">
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-telegram"></i>
+                      </a>
+                      <a class="social__item" href="#" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="team__item-info">
+                  <h5 class="team__item-name">Максимова Анна</h5>
+                  <p class="team__item-position">Детский тренер-хореограф</p>
+                </div>
+                <a class="team__item-link" href="#">Записаться на тренировку</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.Container -->
+      </section>
+
+      <!-- zal -->
+      <section class="section zal" id="zal">
+        <div class="container">
+          <div class="section__header">
+            <h3 class="section__suptitle">
+              ДЛЯ ВСЕЙ СЕМЬИ МЫ НАЙДЕМ ЗАНЯТИЕ ПО ДУШЕ
+            </h3>
+            <h2 class="section__title">Наши залы</h2>
+          </div>
+          <div class="zal-slider">
+            <div class="zal__item">
+              <div
+                class="zal__item-imgbox"
+                style="background-image: url('assets/images/zal/1.jpg')"
+              ></div>
+            </div>
+            <div class="zal__item">
+              <div
+                class="zal__item-imgbox"
+                style="background-image: url('assets/images/zal/2.jpg')"
+              ></div>
+            </div>
+            <div class="zal__item">
+              <div
+                class="zal__item-imgbox"
+                style="background-image: url('assets/images/zal/5.jpg')"
+              ></div>
+            </div>
+            <div class="zal__item">
+              <div
+                class="zal__item-imgbox"
+                style="background-image: url('assets/images/zal/6.jpg')"
+              ></div>
+            </div>
+            <div class="zal__item">
+              <div
+                class="zal__item-imgbox"
+                style="background-image: url('assets/images/zal/7.jpg')"
+              ></div>
+            </div>
+            <div class="zal__item">
+              <div
+                class="zal__item-imgbox"
+                style="background-image: url('assets/images/zal/8.jpg')"
+              ></div>
+            </div>
+            <div class="zal__item">
+              <div
+                class="zal__item-imgbox"
+                style="background-image: url('assets/images/zal/9.jpg')"
+              ></div>
+            </div>
+            <div class="zal__item">
+              <div
+                class="zal__item-imgbox"
+                style="background-image: url('assets/images/zal/10.jpg')"
+              ></div>
+            </div>
+            <div class="zal__item">
+              <div
+                class="zal__item-imgbox"
+                style="background-image: url('assets/images/zal/11.jpg')"
+              ></div>
+            </div>
+            <div class="zal__item">
+              <div
+                class="zal__item-imgbox"
+                style="background-image: url('assets/images/zal/12.jpg')"
+              ></div>
+            </div>
+            <div class="zal__item">
+              <div
+                class="zal__item-imgbox"
+                style="background-image: url('assets/images/zal/13.jpg')"
+              ></div>
+            </div>
+            <div class="zal__item">
+              <div
+                class="zal__item-imgbox"
+                style="background-image: url('assets/images/zal/14.jpg')"
+              ></div>
+            </div>
+            <div class="zal__item">
+              <div
+                class="zal__item-imgbox"
+                style="background-image: url('assets/images/zal/15.jpg')"
+              ></div>
+            </div>
+            <div class="zal__item">
+              <div
+                class="zal__item-imgbox"
+                style="background-image: url('assets/images/zal/16.jpg')"
+              ></div>
+            </div>
+            <div class="zal__item">
+              <div
+                class="zal__item-imgbox"
+                style="background-image: url('assets/images/zal/17.jpg')"
+              ></div>
+            </div>
+            <div class="zal__item">
+              <div
+                class="zal__item-imgbox"
+                style="background-image: url('assets/images/zal/18.jpg')"
+              ></div>
+            </div>
+            <div class="zal__item">
+              <div
+                class="zal__item-imgbox"
+                style="background-image: url('assets/images/zal/19.jpg')"
+              ></div>
+            </div>
+            <div class="zal__item">
+              <div
+                class="zal__item-imgbox"
+                style="background-image: url('assets/images/zal/20.jpg')"
+              ></div>
+            </div>
+            <div class="zal__item">
+              <div
+                class="zal__item-imgbox"
+                style="background-image: url('assets/images/zal/4.jpg')"
+              ></div>
+            </div>
+            <div class="zal__item">
+              <div
+                class="zal__item-imgbox"
+                style="background-image: url('assets/images/zal/3.jpg')"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reviews -->
+      <div class="section" id="reviews">
+        <div class="container">
+          <div class="section__header">
+            <h3 class="section__suptitle">ОТЗЫВЫ НАШИХ КЛИЕНТОВ</h3>
+            <h2 class="section__title">ЧТО О НАС ГОВОРЯТ</h2>
+          </div>
+
+          <div class="reviews">
+            <div class="reviews__item">
               <img
-                class="wedo__img"
-                src="assets/images/wedo/icon-1.jpg"
+                class="reviews__photo"
+                src="assets/images/reviews/1.jpg"
                 alt=""
               />
+              <div class="reviews__author">АНТОН</div>
+              <div class="star" data-rateyo-rating="5"></div>
+              <div class="reviews__text">
+                <p>
+                  Зал большой, отличный персонал, есть все тренажеры которые
+                  нужны для набора мышечной массы, и также для сушки тела. Всем
+                  советую его посетить
+                </p>
+              </div>
             </div>
-            <div class="wedo__item">
+            <div class="reviews__item">
+              <img
+                class="reviews__photo"
+                src="assets/images/reviews/2.jpg"
+                alt=""
+              />
+              <div class="reviews__author">Анастасия С.</div>
+              <div class="star" data-rateyo-rating="5"></div>
+              <div class="reviews__text">
+                <p>
+                  Клуб отличный во всём: атмосфера дружеская, ребята встречают
+                  всегда с улыбкой, тренеры профи своего дела, всегда помогут и
+                  подскажут, посоветуют и поддержат, а как настроение умеют
+                  поднять, так это дорогого стоит!)
+                </p>
+              </div>
+            </div>
+            <div class="reviews__item">
+              <img
+                class="reviews__photo"
+                src="assets/images/reviews/3.jpg"
+                alt=""
+              />
+              <div class="reviews__author">Надежда П.</div>
+              <div class="star" data-rateyo-rating="4.9"></div>
+              <div class="reviews__text">
+                <p>
+                  Посещаю зал 2 года, нравится всё.... Начиная от встречи и
+                  приветствия администраторов (что считаю немаловажным, особенно
+                  когда только знакомишься с клубом!), заканчивая шикарным
+                  внутренним ощущением после тренировок! Индивидуальный подход
+                  как на персональных, так и на групповых тренировках
+                </p>
+              </div>
+            </div>
+            <div class="reviews__item">
+              <img
+                class="reviews__photo"
+                src="assets/images/reviews/4.jpg"
+                alt=""
+              />
+              <div class="reviews__author">Ярослав И.</div>
+              <div class="star" data-rateyo-rating="4.6"></div>
+              <div class="reviews__text">
+                <p>
+                  В фитнес-клубе очень чисто, все дезинфицируется. Мне это очень
+                  нравится! Я занимаюсь для поддержания физической формы,
+                  использую тренажеры на все группы мышц. Особенно привлекает
+                  ежемесячная оплата, наличие разных зон: спа, тренажерный зал,
+                  кардио
+                </p>
+              </div>
+            </div>
+            <div class="reviews__item">
+              <img
+                class="reviews__photo"
+                src="assets/images/reviews/5.jpg"
+                alt=""
+              />
+              <div class="reviews__author">Мария Л.</div>
+              <div class="star" data-rateyo-rating="4.6"></div>
+              <div class="reviews__text">
+                <p>
+                  Занимаюсь на тренажерах самостоятельно, провожу в клубе
+                  час-полтора. Также хожу на групповые занятия, такие как боди
+                  памп и растяжку. Больше всех люблю тренера Алёну. С ней удобно
+                  заниматься, она добрый человек
+                </p>
+              </div>
+            </div>
+            <div class="reviews__item">
+              <img
+                class="reviews__photo"
+                src="assets/images/reviews/6.jpg"
+                alt=""
+              />
+              <div class="reviews__author">Андрей С.</div>
+              <div class="star" data-rateyo-rating="4.8"></div>
+              <div class="reviews__text">
+                <p>
+                  В фитнес-клубе все отлично, я уже два месяца не приходил. Для
+                  приведения себя в хорошую физическую форму предпочитал
+                  заниматься на тренажёрах, без групповых. В зале чисто и
+                  комфортно находиться, удобно, что есть баня и сауна
+                </p>
+              </div>
+            </div>
+            <div class="reviews__item">
+              <img
+                class="reviews__photo"
+                src="assets/images/reviews/7.jpg"
+                alt=""
+              />
+              <div class="reviews__author">Ольга В.</div>
+              <div class="star" data-rateyo-rating="4.5"></div>
+              <div class="reviews__text">
+                <p>
+                  Хорошие тренажеры, всегда чисто, уютно и комфортно в клубе, в
+                  нем приятная атмосфера. Занимаюсь самостоятельно на все группы
+                  мышц, никто не мешает, провожу в зале 1,5—2 часа для
+                  поддержания формы
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- what we do -->
+      <section class="section">
+        <div class="container">
+          <div class="section__header">
+            <h3 class="section__suptitle">часто задаваемые вопросы</h3>
+            <h2 class="section__title">вопросы и ответы</h2>
+          </div>
+
+          <div class="wedo">
+            <div class="wedo__img-box">
+              <img class="wedo__img" src="assets/images/wedo/1.jpg" alt="" />
+            </div>
+            <div class="wedo__content">
               <div class="accordion">
-                <div class="accordion__item" data-collapse="#wedo_1">
+                <div class="accordion__item active" data-collapse="#wedo_1">
                   <div class="accordion__header">
-                    <img
-                      class="accordion__icon"
-                      src="assets/images/wedo/photography.png"
-                      alt=""
-                    />
-                    <div class="accordion__title">Photography</div>
+                    <div class="accordion__title">
+                      Помесячная оплата – это рассрочка?
+                    </div>
                   </div>
                   <div class="accordion__content" id="wedo_1">
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident, sunt in culpa qui
-                      officia deserunt mollit anim id est laborum.
+                      Ни в коем случае, это абонементы с помесячной оплатой, вы
+                      можете прекратить заниматься и платить в любое время,
+                      никаких долговых обязательств
                     </p>
                   </div>
                 </div>
-                <!-- /.Accordion__item -->
 
-                <div class="accordion__item active" data-collapse="#wedo_2">
+                <div class="accordion__item" data-collapse="#wedo_2">
                   <div class="accordion__header">
-                    <img
-                      class="accordion__icon"
-                      src="assets/images/wedo/creativity.png"
-                      alt=""
-                    />
-                    <div class="accordion__title">creativity</div>
+                    <div class="accordion__title">
+                      Занятие с тренером входит в абонемент?
+                    </div>
                   </div>
                   <div class="accordion__content" id="wedo_2">
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident, sunt in culpa qui
-                      officia deserunt mollit anim id est laborum.
+                      Да, во все абонементы включены тренировки с тренером. Это
+                      тридцатиминутные тренировки в тренажерном зале по 6
+                      направлениям, каждое из которых направлено на определенную
+                      группу мышц (бедра, плечи, круговая тренировка и т.д.).
+                      Тренировки проходят в мини-группе от 5-7 человек в
+                      тренажерном зале. Требуют предварительной записи в
+                      мобильном приложении. Не ограничены по количеству
+                      посещений за весь срок действия абонемента
                     </p>
                   </div>
                 </div>
-                <!-- /.Accordion__item -->
 
                 <div class="accordion__item" data-collapse="#wedo_3">
                   <div class="accordion__header">
-                    <img
-                      class="accordion__icon"
-                      src="assets/images/wedo/web design.png"
-                      alt=""
-                    />
-                    <div class="accordion__title">web design</div>
+                    <div class="accordion__title">
+                      Сколько стоит персональная тренировка с тренером?
+                    </div>
                   </div>
                   <div class="accordion__content" id="wedo_3">
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident, sunt in culpa qui
-                      officia deserunt mollit anim id est laborum.
+                      персональная тренировка с тренером? Стоимость персональной
+                      тренировки от 1500 руб. за тренировку в зависимости от
+                      загруженности тренера
                     </p>
                   </div>
                 </div>
-                <!-- /.Accordion__item -->
+
+                <div class="accordion__item" data-collapse="#wedo_4">
+                  <div class="accordion__header">
+                    <div class="accordion__title">
+                      Могу ли я купить сейчас, а прийти потом?
+                    </div>
+                  </div>
+                  <div class="accordion__content" id="wedo_4">
+                    <p>
+                      При покупке вы можете выбрать дату активации в течение
+                      ближайших 10 дней
+                    </p>
+                  </div>
+                </div>
+
+                <div class="accordion__item" data-collapse="#wedo_5">
+                  <div class="accordion__header">
+                    <div class="accordion__title">
+                      Что нужно с собой брать в клуб?
+                    </div>
+                  </div>
+                  <div class="accordion__content" id="wedo_5">
+                    <p>
+                      Для комфортного посещения клуба мы рекомендуем взять с
+                      собой помимо формы для занятий полотенце, тапочки для
+                      душа, купальный костюм для СПА зоны
+                    </p>
+                  </div>
+                </div>
+
+                <div class="accordion__item" data-collapse="#wedo_6">
+                  <div class="accordion__header">
+                    <div class="accordion__title">
+                      С какого возраста можно стать членом клуба?
+                    </div>
+                  </div>
+                  <div class="accordion__content" id="wedo_6">
+                    <p>Членом клуба можно стать с 16 лет</p>
+                  </div>
+                </div>
+
+                <div class="accordion__item" data-collapse="#wedo_7">
+                  <div class="accordion__header">
+                    <div class="accordion__title">Есть полотенца, кулеры?</div>
+                  </div>
+                  <div class="accordion__content" id="wedo_7">
+                    <p>
+                      Полотенца не выдаем. В раздевалках есть питьевые
+                      фонтанчики, в зале есть вендинговые аппараты с большим
+                      выбором различных напитков
+                    </p>
+                  </div>
+                </div>
               </div>
               <!-- /.Accordion -->
             </div>
@@ -504,528 +1333,36 @@
         <!-- /.Container -->
       </section>
 
-      <!-- Reviews-1 -->
-      <div class="section section--gray">
-        <div class="container">
-          <div class="reviews">
-            <div data-slider>
-              <div>
-                <div class="reviews__item">
-                  <img
-                    class="reviews__photo"
-                    src="assets/images/reviews/reviews1-1.jpg"
-                    alt=""
-                  />
-                  <div class="reviews__text">
-                    <p>
-                      “Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud
-                      exercitation.”
-                    </p>
-                  </div>
-                  <div class="reviews__author">Mavis Rice</div>
-                </div>
-              </div>
-
-              <div>
-                <div class="reviews__item">
-                  <img
-                    class="reviews__photo"
-                    src="assets/images/reviews/reviews1-2.jpg"
-                    alt=""
-                  />
-                  <div class="reviews__text">
-                    <p>
-                      “Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua.”
-                    </p>
-                  </div>
-                  <div class="reviews__author">Jon Doe</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Team -->
-      <section class="section" id="team">
-        <div class="container">
-          <div class="section__header">
-            <h3 class="section__cuptitle">Who we are</h3>
-            <h2 class="section__title">Meet our team</h2>
-            <div class="section__text">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card__item">
-              <div class="card__inner">
-                <div class="card__img">
-                  <img src="assets/images/team/team-1.jpg" alt="" />
-                </div>
-                <div class="card__text">
-                  <div class="social">
-                    <a class="social__item">
-                      <i
-                        class="fa-brands fa-facebook-f"
-                        href="#"
-                        target="_blank"
-                      ></i>
-                    </a>
-                    <a class="social__item">
-                      <i
-                        class="fa-brands fa-twitter"
-                        href="#"
-                        target="_blank"
-                      ></i>
-                    </a>
-                    <a class="social__item">
-                      <i
-                        class="fa-brands fa-pinterest-p"
-                        href="#"
-                        target="_blank"
-                      ></i>
-                    </a>
-                    <a class="social__item">
-                      <i
-                        class="fa-brands fa-instagram"
-                        href="#"
-                        target="_blank"
-                      ></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card__info">
-                <div class="card__name">Matthew Dix</div>
-                <div class="card__prof">Graphic Design</div>
-              </div>
-            </div>
-            <!-- /.Card__item -->
-
-            <div class="card__item">
-              <div class="card__inner">
-                <div class="card__img">
-                  <img src="assets/images/team/team-2.jpg" alt="" />
-                </div>
-                <div class="card__text">
-                  <div class="social">
-                    <a class="social__item">
-                      <i
-                        class="fa-brands fa-facebook-f"
-                        href="#"
-                        target="_blank"
-                      ></i>
-                    </a>
-                    <a class="social__item">
-                      <i
-                        class="fa-brands fa-twitter"
-                        href="#"
-                        target="_blank"
-                      ></i>
-                    </a>
-                    <a class="social__item">
-                      <i
-                        class="fa-brands fa-pinterest-p"
-                        href="#"
-                        target="_blank"
-                      ></i>
-                    </a>
-                    <a class="social__item">
-                      <i
-                        class="fa-brands fa-instagram"
-                        href="#"
-                        target="_blank"
-                      ></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card__info">
-                <div class="card__name">Christopher Campbell</div>
-                <div class="card__prof">Branding/UX design</div>
-              </div>
-            </div>
-            <!-- /.Card__item -->
-
-            <div class="card__item">
-              <div class="card__inner">
-                <div class="card__img">
-                  <img src="assets/images/team/team-3.jpg" alt="" />
-                </div>
-                <div class="card__text">
-                  <div class="social">
-                    <a class="social__item">
-                      <i
-                        class="fa-brands fa-facebook-f"
-                        href="#"
-                        target="_blank"
-                      ></i>
-                    </a>
-                    <a class="social__item">
-                      <i
-                        class="fa-brands fa-twitter"
-                        href="#"
-                        target="_blank"
-                      ></i>
-                    </a>
-                    <a class="social__item">
-                      <i
-                        class="fa-brands fa-pinterest-p"
-                        href="#"
-                        target="_blank"
-                      ></i>
-                    </a>
-                    <a class="social__item">
-                      <i
-                        class="fa-brands fa-instagram"
-                        href="#"
-                        target="_blank"
-                      ></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card__info">
-                <div class="card__name">Michael Fertig</div>
-                <div class="card__prof">Developer</div>
-              </div>
-            </div>
-            <!-- /.Card__item -->
-          </div>
-          <!-- /.Card -->
-        </div>
-        <!-- /.Container -->
-      </section>
-
-      <!-- Logos -->
-      <div class="section section--gray">
-        <div class="container">
-          <div class="logos">
-            <div class="logos__item">
-              <img
-                class="logos__img"
-                src="assets/images/logos/logos-1.png"
-                alt=""
-              />
-            </div>
-            <div class="logos__item">
-              <img
-                class="logos__img"
-                src="assets/images/logos/logos-2.png"
-                alt=""
-              />
-            </div>
-            <div class="logos__item">
-              <img
-                class="logos__img"
-                src="assets/images/logos/logos-3.png"
-                alt=""
-              />
-            </div>
-            <div class="logos__item">
-              <img
-                class="logos__img"
-                src="assets/images/logos/logos-4.png"
-                alt=""
-              />
-            </div>
-            <div class="logos__item">
-              <img
-                class="logos__img"
-                src="assets/images/logos/logos-5.png"
-                alt=""
-              />
-            </div>
-            <div class="logos__item">
-              <img
-                class="logos__img"
-                src="assets/images/logos/logos-6.png"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Works -->
-      <section class="section" id="photo">
-        <div class="container">
-          <div class="section__header">
-            <h3 class="section__cuptitle">What we do copy</h3>
-            <h2 class="section__title">some of our work</h2>
-            <div class="section__text">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="works">
-          <div class="works__col">
-            <div class="works__item">
-              <img
-                class="work__image"
-                src="assets/images/works/works-1.jpg"
-                alt=""
-              />
-              <div class="works__info">
-                <div class="works__title">creatively designed</div>
-                <div class="works__text">Lorem ipsum dolor sit</div>
-              </div>
-            </div>
-            <div class="works__item">
-              <img
-                class="work__image"
-                src="assets/images/works/works-2.jpg"
-                alt=""
-              />
-              <div class="works__info">
-                <div class="works__title">creatively designed</div>
-                <div class="works__text">Lorem ipsum dolor sit</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="works__col">
-            <div class="works__item">
-              <img
-                class="work__image"
-                src="assets/images/works/works-3.jpg"
-                alt=""
-              />
-              <div class="works__info">
-                <div class="works__title">creatively designed</div>
-                <div class="works__text">Lorem ipsum dolor sit</div>
-              </div>
-            </div>
-            <div class="works__item">
-              <img
-                class="work__image"
-                src="assets/images/works/works-4.jpg"
-                alt=""
-              />
-              <div class="works__info">
-                <div class="works__title">creatively designed</div>
-                <div class="works__text">Lorem ipsum dolor sit</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="works__col">
-            <div class="works__item">
-              <img
-                class="work__image"
-                src="assets/images/works/works-5.jpg"
-                alt=""
-              />
-              <div class="works__info">
-                <div class="works__title">creatively designed</div>
-                <div class="works__text">Lorem ipsum dolor sit</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="works__col">
-            <div class="works__item">
-              <img
-                class="work__image"
-                src="assets/images/works/works-6.jpg"
-                alt=""
-              />
-              <div class="works__info">
-                <div class="works__title">creatively designed</div>
-                <div class="works__text">Lorem ipsum dolor sit</div>
-              </div>
-            </div>
-            <div class="works__item">
-              <img
-                class="work__image"
-                src="assets/images/works/works-7.jpg"
-                alt=""
-              />
-              <div class="works__info">
-                <div class="works__title">creatively designed</div>
-                <div class="works__text">Lorem ipsum dolor sit</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- /.Works -->
-      </section>
-
-      <!-- Reviews-2 -->
-      <div class="section">
-        <div class="container">
-          <div class="reviews">
-            <div data-slider>
-              <div>
-                <div class="reviews__item">
-                  <img
-                    class="reviews__photo"
-                    src="assets/images/reviews/reviews2-1.jpg"
-                    alt=""
-                  />
-                  <div class="reviews__text">
-                    <p>
-                      “Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua.”
-                    </p>
-                  </div>
-                  <div class="reviews__author">Amos Banks</div>
-                </div>
-              </div>
-
-              <div>
-                <div class="reviews__item">
-                  <img
-                    class="reviews__photo"
-                    src="assets/images/reviews/reviews2-2.jpg"
-                    alt=""
-                  />
-                  <div class="reviews__text">
-                    <p>
-                      “Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud
-                      exercitation.”
-                    </p>
-                  </div>
-                  <div class="reviews__author">Maria Gray</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Clients -->
-      <section class="section section--clients">
-        <div class="container">
-          <div class="section__header section__header--clients">
-            <h3 class="section__cuptitle">Happy Clients</h3>
-            <h2 class="section__title">What people say</h2>
-          </div>
-
-          <div class="clients">
-            <div class="clients__item">
-              <img
-                class="clients__photo"
-                src="assets/images/clients/client-1.jpg"
-                alt=""
-              />
-              <div class="clients__content">
-                <div class="clients__name">Matthew Dix</div>
-                <div class="clients__prof">Graphic Design</div>
-                <div class="clients__text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim.
-                </div>
-              </div>
-            </div>
-
-            <div class="clients__item">
-              <img
-                class="clients__photo"
-                src="assets/images/clients/client-2.jpg"
-                alt=""
-              />
-              <div class="clients__content">
-                <div class="clients__name">Nick Karvounis</div>
-                <div class="clients__prof">Graphic Design</div>
-                <div class="clients__text">
-                  Sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                  veniam
-                </div>
-              </div>
-            </div>
-
-            <div class="clients__item">
-              <img
-                class="clients__photo"
-                src="assets/images/clients/client-3.jpg"
-                alt=""
-              />
-              <div class="clients__content">
-                <div class="clients__name">Jaelynn Castillo</div>
-                <div class="clients__prof">Graphic Design</div>
-                <div class="clients__text">
-                  Ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim ad minim veniam
-                </div>
-              </div>
-            </div>
-
-            <div class="clients__item">
-              <img
-                class="clients__photo"
-                src="assets/images/clients/client-4.jpg"
-                alt=""
-              />
-              <div class="clients__content">
-                <div class="clients__name">Mike Petrucci</div>
-                <div class="clients__prof">Graphic Design</div>
-                <div class="clients__text">
-                  Dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                  minim.
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- /.Clients -->
-        </div>
-        <!-- /.Container -->
-      </section>
-
       <!-- Blog -->
       <section class="section" id="blog">
         <div class="container">
           <div class="section__header section__header--blog">
-            <h3 class="section__cuptitle">Our stories</h3>
-            <h2 class="section__title">Latest blog</h2>
+            <h3 class="section__suptitle">АКТУАЛЬНЫЕ НОВОСТИ СПОРТА</h3>
+            <h2 class="section__title">Наш блог</h2>
           </div>
 
           <div class="blog">
             <div class="blog__item">
               <div class="blog__header">
-                <a href="#">
+                <a class="blog__link" href="#">
                   <img
                     class="blog__photo"
-                    src="assets/images/blog/blog-1.jpg"
+                    src="assets/images/blog/1.jpg"
                     alt=""
                   />
                 </a>
                 <div class="blog__date">
                   <div class="blog__date-day">15</div>
-                  Jan
+                  Июн
                 </div>
               </div>
-              <div class="blog__content">
-                <div class="blog__title">
-                  <a href="#">Lorem ipsum dolor sit amet</a>
-                </div>
-                <div class="blog__text">
-                  Consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                  ut labore et dolore magna aliqua.
-                </div>
+              <div class="blog__title">
+                <a href="#">С чего начать тренировки в зале?</a>
+              </div>
+              <div class="blog__text">
+                Первое и самое важное – постановка целей. Понимая четкую цель, к
+                которой вы идёте, вам будет проще подобрать тренировочные
+                программы, тип питания и тип нагрузки
               </div>
               <div class="blog__footer">
                 <div class="blog-stat">
@@ -1041,26 +1378,28 @@
 
             <div class="blog__item">
               <div class="blog__header">
-                <a href="#">
+                <a class="blog__link" href="#">
                   <img
                     class="blog__photo"
-                    src="assets/images/blog/blog-2.jpg"
+                    src="assets/images/blog/2.jpg"
                     alt=""
                   />
                 </a>
                 <div class="blog__date">
                   <div class="blog__date-day">14</div>
-                  Jan
+                  Июн
                 </div>
               </div>
-              <div class="blog__content">
-                <div class="blog__title">
-                  <a href="#">sed do eiusmod tempor</a>
-                </div>
-                <div class="blog__text">
-                  Adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua.
-                </div>
+              <div class="blog__title">
+                <a href="#"
+                  >Как похудеть без занятий спортом? Самые действенные нюансы
+                  для ленивых</a
+                >
+              </div>
+              <div class="blog__text">
+                Иметь стройное и красивое тело – мечта каждого. Ни одна женщина
+                или мужчина, не откажется от того, чтобы собирать восторженные
+                взгляды окружающих и ощущать уверенность
               </div>
               <div class="blog__footer">
                 <div class="blog-stat">
@@ -1076,26 +1415,25 @@
 
             <div class="blog__item">
               <div class="blog__header">
-                <a href="#">
+                <a class="blog__link" href="#">
                   <img
                     class="blog__photo"
-                    src="assets/images/blog/blog-3.jpg"
+                    src="assets/images/blog/3.jpg"
                     alt=""
                   />
                 </a>
                 <div class="blog__date">
                   <div class="blog__date-day">12</div>
-                  Jan
+                  Июн
                 </div>
               </div>
-              <div class="blog__content">
-                <div class="blog__title">
-                  <a href="#">incididunt ut labore et dolore</a>
-                </div>
-                <div class="blog__text">
-                  Elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </div>
+              <div class="blog__title">
+                <a href="#">Упражнения в тренажерном зале</a>
+              </div>
+              <div class="blog__text">
+                Как самостоятельно составить программу тренировок. Когда человек
+                переступает порог тренажерного зала, ему крайне важно понимать,
+                какая конкретно цель привела его сюда, и в какие сроки
               </div>
               <div class="blog__footer">
                 <div class="blog-stat">
@@ -1115,12 +1453,12 @@
       </section>
 
       <!-- Map -->
-      <section class="section section--map">
+      <section class="section map">
         <div class="container">
-          <div class="map">
+          <div class="map__content">
             <h2 class="map__title">
               <div><i class="fa-solid fa-location-dot"></i></div>
-              <a href="https://goo.gl/maps/Ztu4mgoo9VCsoiLm6" target="_blank"
+              <a href="https://goo.gl/maps/6LkX4xYUezHpbdku7" target="_blank"
                 >Open Map</a
               >
             </h2>
@@ -1133,161 +1471,207 @@
         <div class="container">
           <div class="footer__inner">
             <div class="footer__col footer__col--first">
-              <div class="footer__logo">MoGo</div>
+              <div class="footer__logo">IRONHERO GYM</div>
               <div class="footer__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                Оставь адрес своей электронной почты и будь в курсе акций,
+                скидок и других событий клуба IRONHERO GYM
               </div>
 
-              <div class="footer__social">
-                <div class="footer__social-header"><b>15k</b> followers</div>
-                <div class="footer__social-content">
-                  Follow Us:
-                  <a href="#" target="_blank">
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-                  <a href="#">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                  <a href="#">
-                    <i class="fa-brands fa-pinterest-p"></i>
-                  </a>
-                  <a href="#">
-                    <i class="fa-brands fa-google-plus-g"></i>
-                  </a>
-                  <a href="#">
-                    <i class="fa-brands fa-youtube"></i>
-                  </a>
-                </div>
-              </div>
+              <ul class="footer__contacts">
+                <li class="footer__contacts-item">
+                  <span class="address">г.Омск, ул.Интернациональная 43, ТЦ "Омский", 2 этаж</span>
+                </li>
+                <li class="footer__contacts-item">
+                  <a class="phone" href="tel:+79381593138">+7(938) 159 31 38</a>
+                </li>
+                <li class="footer__contacts-item">
+                  <a class="email" href="mailto:info@fitnessomsk.ru">info@fitnessomsk.ru</a>
+                </li>
+              </ul>
 
               <form class="subscribe" action="/" method="post">
                 <input
                   class="subscribe__input"
                   type="email"
                   name="name"
-                  placeholder="Your Email..."
+                  placeholder="Ваш Email адрес"
                 />
-                <button class="subscribe__btn" type="submit">Subscribe</button>
+                <button class="subscribe__btn" type="submit">
+                  подписаться
+                </button>
               </form>
+
+              <div class="footer__social">
+                <div class="footer__social-header"><b>15к</b> подписчиков</div>
+                <div class="footer__social-content">
+                  Следите за нами:
+                  <a href="#" target="_blank">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                  <a href="#" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                  <a href="#" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="#" target="_blank">
+                    <i class="fa-brands fa-telegram"></i>
+                  </a>
+                  <a href="#" target="_blank">
+                    <i class="fa-brands fa-vk"></i>
+                  </a>
+                </div>
+              </div>
             </div>
             <!-- /.Footer__col -->
 
             <div class="footer__col footer__col--second">
-              <div class="footer__title">Blogs</div>
+              <div class="footer__title">Блоги</div>
 
               <div class="blogs">
                 <div class="blogs__item">
-                  <a href="#">
-                    <img
-                      class="blogs__img"
-                      src="assets/images/footer-blogs/footer-blogs-1.jpg"
-                      alt=""
-                    />
-                  </a>
+                  <div class="blogs__item-imgbox">
+                    <a class="blogs__link" href="#">
+                      <img
+                        class="blogs__img"
+                        src="assets/images/footer-blogs/1.jpg"
+                        alt=""
+                      />
+                    </a>
+                  </div>
                   <div class="blogs__content">
                     <a class="blogs__title" href="#"
-                      >Lorem ipsum dolor sit amet, consectetur adipiscing</a
+                      >Как избавиться от целлюлита?</a
                     >
-                    <div class="blogs__date">Jan 9, 2016</div>
+                    <div class="blogs__date">Июн 28, 2023</div>
                   </div>
                 </div>
 
                 <div class="blogs__item">
-                  <a href="#">
-                    <img
-                      class="blogs__img"
-                      src="assets/images/footer-blogs/footer-blogs-2.jpg"
-                      alt=""
-                    />
-                  </a>
+                  <div class="blogs__item-imgbox">
+                    <a class="blogs__link" href="#">
+                      <img
+                        class="blogs__img"
+                        src="assets/images/footer-blogs/2.jpg"
+                        alt=""
+                      />
+                    </a>
+                  </div>
                   <div class="blogs__content">
                     <a class="blogs__title" href="#"
-                      >Consectetur adipiscing elit, sed do eiusmod tempor</a
+                      >Топ ошибок новичков в тренажерном зале</a
                     >
-                    <div class="blogs__date">Jan 7, 2016</div>
+                    <div class="blogs__date">Июн 26, 2023</div>
                   </div>
                 </div>
 
                 <div class="blogs__item">
-                  <a href="#">
-                    <img
-                      class="blogs__img"
-                      src="assets/images/footer-blogs/footer-blogs-3.jpg"
-                      alt=""
-                    />
-                  </a>
+                  <div class="blogs__item-imgbox">
+                    <a class="blogs__link" href="#">
+                      <img
+                        class="blogs__img"
+                        src="assets/images/footer-blogs/3.jpg"
+                        alt=""
+                      />
+                    </a>
+                  </div>
                   <div class="blogs__content">
                     <a class="blogs__title" href="#"
-                      >sed do eiusmod tempor incididunt ut labore</a
+                      >Жиросжигатели. Как работают и есть ли вред?</a
                     >
-                    <div class="blogs__date">Jan 4, 2016</div>
+                    <div class="blogs__date">Июн 25, 2023</div>
                   </div>
                 </div>
               </div>
               <!-- /.Blogs-->
             </div>
             <div class="footer__col footer__col--third">
-              <div class="footer__title">Instagram</div>
+              <div class="footer__title">Мы в Instagram</div>
 
               <div class="instagram">
                 <a class="instagram__item" href="#" target="_blank">
-                  <img
-                    src="assets/images/footer-instagram/footer-instagram-1.jpg"
-                  />
+                  <div class="instagram__item-imgbox">
+                    <img
+                      class="instagram__item-img"
+                      src="assets/images/footer-instagram/1.jpg"
+                    />
+                  </div>
                 </a>
                 <a class="instagram__item" href="#" target="_blank">
-                  <img
-                    src="assets/images/footer-instagram/footer-instagram-2.jpg"
-                  />
+                  <div class="instagram__item-imgbox">
+                    <img
+                      class="instagram__item-img"
+                      src="assets/images/footer-instagram/2.jpg"
+                    />
+                  </div>
                 </a>
                 <a class="instagram__item" href="#" target="_blank">
-                  <img
-                    src="assets/images/footer-instagram/footer-instagram-3.jpg"
-                  />
+                  <div class="instagram__item-imgbox">
+                    <img
+                      class="instagram__item-img"
+                      src="assets/images/footer-instagram/3.jpg"
+                    />
+                  </div>
                 </a>
                 <a class="instagram__item" href="#" target="_blank">
-                  <img
-                    src="assets/images/footer-instagram/footer-instagram-4.jpg"
-                  />
+                  <div class="instagram__item-imgbox">
+                    <img
+                      class="instagram__item-img"
+                      src="assets/images/footer-instagram/4.jpg"
+                    />
+                  </div>
                 </a>
                 <a class="instagram__item" href="#" target="_blank">
-                  <img
-                    src="assets/images/footer-instagram/footer-instagram-5.jpg"
-                  />
+                  <div class="instagram__item-imgbox">
+                    <img
+                      class="instagram__item-img"
+                      src="assets/images/footer-instagram/5.jpg"
+                    />
+                  </div>
                 </a>
                 <a class="instagram__item" href="#" target="_blank">
-                  <img
-                    src="assets/images/footer-instagram/footer-instagram-6.jpg"
-                  />
+                  <div class="instagram__item-imgbox">
+                    <img
+                      class="instagram__item-img"
+                      src="assets/images/footer-instagram/6.jpg"
+                    />
+                  </div>
                 </a>
                 <a class="instagram__item" href="#" target="_blank">
-                  <img
-                    src="assets/images/footer-instagram/footer-instagram-7.jpg"
-                  />
+                  <div class="instagram__item-imgbox">
+                    <img
+                      class="instagram__item-img"
+                      src="assets/images/footer-instagram/7.jpg"
+                    />
+                  </div>
                 </a>
                 <a class="instagram__item" href="#" target="_blank">
-                  <img
-                    src="assets/images/footer-instagram/footer-instagram-8.jpg"
-                  />
+                  <div class="instagram__item-imgbox">
+                    <img
+                      class="instagram__item-img"
+                      src="assets/images/footer-instagram/8.jpg"
+                    />
+                  </div>
                 </a>
                 <a class="instagram__item" href="#" target="_blank">
-                  <img
-                    src="assets/images/footer-instagram/footer-instagram-9.jpg"
-                  />
+                  <div class="instagram__item-imgbox">
+                    <img
+                      class="instagram__item-img"
+                      src="assets/images/footer-instagram/9.jpg"
+                    />
+                  </div>
                 </a>
               </div>
 
-              <div class="instagram__text">View more photos</div>
+              <a class="instagram__text" href="#">Показать больше фото</a>
             </div>
           </div>
           <!-- /.Footer__inner -->
 
           <div class="copyright">
-            <div>Copyright © 2022 MoGo. All Rights Reserved</div>
-            <div>Made <span>by Alex Lev</span></div>
+            <div>
+              IRONHERO GYM © 2023. Все права защищены<span> by Alexlev</span>
+            </div>
           </div>
         </div>
         <!-- /.Container -->
@@ -1300,6 +1684,7 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
+    <script src="assets/js/jquery.rateyo.js"></script>
     <script src="assets/js/app.js"></script>
   </body>
 </html>
