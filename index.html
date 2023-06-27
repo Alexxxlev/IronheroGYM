@@ -21,53 +21,56 @@
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/jquery.rateyo.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <title>MoGo</title>
+    <title>Ironhero GYM</title>
   </head>
   <body>
-    <!-- Header -->
-    <header class="header" id="header">
-      <div class="container">
-        <div class="header__inner">
-          <div class="header__top">
-            <ul class="header__list">
-              <li class="header__item">
-                <a class="phone" href="tel:+79381593138">+7(938) 159 31 38</a>
-              </li>
-              <li class="header__item">
-                <a class="email" href="mailto:info@fitnessomsk.ru"
-                  >info@fitnessomsk.ru</a
-                >
-              </li>
-              <li class="header__item">
-                <span class="time">
-                  Пн-Пт : 8.00-22.00 Сб-Вс : 8.00-21.00
-                </span>
-              </li>
-            </ul>
-            <a class="header__btn btn" href="#" data-scroll="#subscription"
-              >Купить абонемент</a
-            >
-          </div>
-          <div class="header__bottom">
+    <div class="page">
+      <!-- Header -->
+      <header class="header" id="header">
+        <div class="container">
+          <div class="header__inner">
             <div class="header__logo" data-scroll="#intro">IRONHERO GYM</div>
 
-            <nav class="nav" id="nav">
-              <a class="nav__link" href="#" data-scroll="#about">О нас</a>
-              <a class="nav__link" href="#" data-scroll="#services">Услуги</a>
-              <a class="nav__link" href="#" data-scroll="#team">Тренеры</a>
-              <a class="nav__link" href="#" data-scroll="#zal">Фото клуба</a>
-              <a class="nav__link" href="#" data-scroll="#footer">Контакты</a>
-            </nav>
+            <div class="header__info">
+              <div class="header__info-top">
+                <ul class="header__list">
+                  <li class="header__item">
+                    <a class="phone" href="tel:+79381593138"
+                      >+7(938) 159 31 38</a
+                    >
+                  </li>
+                  <li class="header__item">
+                    <a class="email" href="mailto:info@fitnessomsk.ru"
+                      >info@fitnessomsk.ru</a
+                    >
+                  </li>
+                  <li class="header__item">
+                    <span class="time">
+                      Пн-Пт : 8.00-22.00 Сб-Вс : 8.00-21.00
+                    </span>
+                  </li>
+                </ul>
+                <a class="header__btn btn" href="#" data-scroll="#subscription"
+                  >Купить абонемент</a
+                >
+              </div>
+
+              <nav class="nav" id="nav">
+                <a class="nav__link" href="#" data-scroll="#about">О нас</a>
+                <a class="nav__link" href="#" data-scroll="#services">Услуги</a>
+                <a class="nav__link" href="#" data-scroll="#team">Тренеры</a>
+                <a class="nav__link" href="#" data-scroll="#zal">Фото клуба</a>
+                <a class="nav__link" href="#" data-scroll="#footer">Контакты</a>
+              </nav>
+            </div>
 
             <button class="nav-toggle" id="nav_toggle" type="button">
               <span class="nav-toggle__item">Menu</span>
             </button>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
 
-    <div class="page">
       <!-- Intro -->
       <div class="intro" id="intro">
         <div class="container">
@@ -88,7 +91,10 @@
         <div class="slider">
           <div class="container">
             <div class="slider__inner">
-              <div class="slider__item slider__item--active" data-scroll="#subscription">
+              <div
+                class="slider__item slider__item--active"
+                data-scroll="#subscription"
+              >
                 <span class="slider__num">01</span>
                 <span class="slider__text">Абонемент</span>
               </div>
@@ -1075,14 +1081,14 @@
       </section>
 
       <!-- Reviews -->
-      <div class="section" id="reviews">
+      <div class="section reviews" id="reviews">
         <div class="container">
           <div class="section__header">
             <h3 class="section__suptitle">ОТЗЫВЫ НАШИХ КЛИЕНТОВ</h3>
             <h2 class="section__title">ЧТО О НАС ГОВОРЯТ</h2>
           </div>
 
-          <div class="reviews">
+          <div class="reviews-slider">
             <div class="reviews__item">
               <img
                 class="reviews__photo"
@@ -1129,8 +1135,7 @@
                   Посещаю зал 2 года, нравится всё.... Начиная от встречи и
                   приветствия администраторов (что считаю немаловажным, особенно
                   когда только знакомишься с клубом!), заканчивая шикарным
-                  внутренним ощущением после тренировок! Индивидуальный подход
-                  как на персональных, так и на групповых тренировках
+                  внутренним ощущением после тренировок!
                 </p>
               </div>
             </div>
@@ -1144,11 +1149,10 @@
               <div class="star" data-rateyo-rating="4.6"></div>
               <div class="reviews__text">
                 <p>
-                  В фитнес-клубе очень чисто, все дезинфицируется. Мне это очень
-                  нравится! Я занимаюсь для поддержания физической формы,
-                  использую тренажеры на все группы мышц. Особенно привлекает
-                  ежемесячная оплата, наличие разных зон: спа, тренажерный зал,
-                  кардио
+                  В фитнес-клубе очень чисто. Я занимаюсь для поддержания
+                  физической формы, использую тренажеры на все группы мышц.
+                  Особенно привлекает ежемесячная оплата, наличие разных зон:
+                  спа, тренажерный зал, кардио
                 </p>
               </div>
             </div>
@@ -1479,13 +1483,17 @@
 
               <ul class="footer__contacts">
                 <li class="footer__contacts-item">
-                  <span class="address">г.Омск, ул.Интернациональная 43, ТЦ "Омский", 2 этаж</span>
+                  <span class="address"
+                    >г.Омск, ул.Интернациональная 43, ТЦ "Омский", 2 этаж</span
+                  >
                 </li>
                 <li class="footer__contacts-item">
                   <a class="phone" href="tel:+79381593138">+7(938) 159 31 38</a>
                 </li>
                 <li class="footer__contacts-item">
-                  <a class="email" href="mailto:info@fitnessomsk.ru">info@fitnessomsk.ru</a>
+                  <a class="email" href="mailto:info@fitnessomsk.ru"
+                    >info@fitnessomsk.ru</a
+                  >
                 </li>
               </ul>
 
