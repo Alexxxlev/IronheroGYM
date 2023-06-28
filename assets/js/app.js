@@ -7,7 +7,6 @@ $(function () {
     navToggle = $("#nav_toggle"),
     dataScroll = $("[data-scroll]"),
     dataCollapse = $("[data-collapse]");
-  // dataSlider = $("[data-slider]");
 
   /* Fixed Header */
   checkScroll(scrollOffset);
@@ -37,7 +36,7 @@ $(function () {
     navA.removeClass("active");
     nav.removeClass("active");
     $this.addClass("active");
-    navToggle.removeClass("active");
+    navToggle.removeClass("nav-toggle--active");
 
     $("html, bode").animate(
       {
@@ -53,8 +52,23 @@ $(function () {
 
     var $this = $(this);
 
-    $this.toggleClass("active");
-    nav.toggleClass("active");
+    $this.toggleClass("nav-toggle--active");
+    $(".header__info").toggleClass("header__info--active");
+  });
+  // если клик вне области меню = закрыть меню
+  $(document).on("click", function (e) {
+    if (
+      $(e.target).closest(".header__info").length == 0 &&
+      $(".header__info").hasClass("header__info--active") &&
+      $(e.target).closest(".nav-toggle--active").length == 0
+    ) {
+      $(".header__info").toggleClass("header__info--active");
+      $(".nav-toggle").toggleClass("nav-toggle--active");
+    }
+  });
+  // если клик на ссылку внутри меню = закрыть меню
+  $(".nav__link").on("click", function (e) {
+    $(".header__info").toggleClass("header__info--active");
   });
 
   /* Collapse */
@@ -67,7 +81,7 @@ $(function () {
   });
 
   /* Slider reviews */
-  $(".reviews").slick({
+  $(".reviews-slider").slick({
     infinite: true,
     fade: false,
     slidesToShow: 2,
@@ -76,6 +90,22 @@ $(function () {
       delay: 3000,
       disableOnInteraction: false,
     },
+    responsive: [
+      {
+        breakpoint: 861,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          centerMode: false,
+        },
+      },
+    ],
   });
   /* Slider reviews */
   $(".team-slider").slick({
@@ -83,6 +113,28 @@ $(function () {
     fade: false,
     slidesToShow: 3,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 661,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true,
+        },
+      },
+      {
+        breakpoint: 461,
+        settings: {
+          slidesToShow: 1,
+          centerMode: false,
+        },
+      },
+    ],
   });
   /* Slider zal */
   $(".zal-slider").slick({
@@ -91,6 +143,29 @@ $(function () {
     slidesToScroll: 1,
     centerMode: true,
     dots: true,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+          centerMode: false,
+        },
+      },
+      {
+        breakpoint: 661,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true,
+        },
+      },
+      {
+        breakpoint: 461,
+        settings: {
+          slidesToShow: 1,
+          centerMode: false,
+        },
+      },
+    ],
   });
 
   /* звездный рейтинг */
