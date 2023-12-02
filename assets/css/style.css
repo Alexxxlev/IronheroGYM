@@ -1385,9 +1385,9 @@ hr {
 }
 
 .blog__title {
-  margin-bottom: auto;
+  /* margin-bottom: auto; */
   padding-bottom: 10px;
-  flex-grow: 1;
+  /* flex-grow: 1; */
   font-size: 14px;
   color: #fff;
   text-transform: uppercase;
